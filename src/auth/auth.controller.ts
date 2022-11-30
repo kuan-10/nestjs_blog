@@ -6,14 +6,14 @@ import { RegisterDto } from './dto/RegisterDto';
 @Controller('auth')
 export class AuthController {
     constructor(private readonly authService:AuthService){}
-    @Post('register')
+    @Post('register')//用户注册
     register(@Body() dto:RegisterDto){
-    return dto
+    return this.authService.register(dto)
     }
     
-    @Post('login')
+    @Post('login')//用户登录
     login(@Body() dto:LoginDto){
-        return "abc"
+       return this.authService.login(dto)
     }
 
 }

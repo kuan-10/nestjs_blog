@@ -1,8 +1,7 @@
 import { Body, Controller, Get, Param, Post } from '@nestjs/common';
 import { AppService } from './app.service';
 import {PrismaClient} from '@prisma/client'
-import {ValidationPipe} from './pi-testify/pi-testify.pipe'
-import createArticleDto from './dto/create.article.dto';
+
 @Controller()
 export class AppController {
   prisma:PrismaClient;
